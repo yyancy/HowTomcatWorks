@@ -26,6 +26,11 @@
 		    <version>2.3</version><!-- 这里使用低版本的servlet -->
 		    <scope>provided</scope>
 	</dependency>
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>1.18.12</version>
+      </dependency>
   </dependencies>
   
   <build/>
