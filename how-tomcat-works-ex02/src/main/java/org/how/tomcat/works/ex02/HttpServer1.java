@@ -28,7 +28,7 @@ public class HttpServer1 {
 
   public void await() {
     ServerSocket serverSocket = null;
-    int port = 8080;
+    int port = 8082;
     try {
       serverSocket =  new ServerSocket(port, 1, InetAddress.getByName("127.0.0.1"));
     }
@@ -73,7 +73,7 @@ public class HttpServer1 {
       }
       catch (Exception e) {
         e.printStackTrace();
-        System.exit(1);
+//        System.exit(1);
       }
     }
   }

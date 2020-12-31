@@ -40,6 +40,10 @@ public class Response implements ServletResponse {
            [ message-body ]
          Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF
       */
+      output.write(("HTTP/1.1 200 OK\r\n" +
+          "Content-Type: text/html\r\n" +
+          "Content-Length: " + file.length() +
+          "\r\n\r\n").getBytes());
       int ch = fis.read(bytes, 0, BUFFER_SIZE);
       while (ch!=-1) {
         output.write(bytes, 0, ch);
@@ -47,11 +51,11 @@ public class Response implements ServletResponse {
       }
     }
     catch (FileNotFoundException e) {
-      String errorMessage = "HTTP/1.1 404 File Not Found\r\n" +
-        "Content-Type: text/html\r\n" +
-        "Content-Length: 23\r\n" +
-        "\r\n" +
-        "<h1>File Not Found</h1>";
+      // file not found
+      String errorMessage = "HTTP/1.1 404 File Not Found\r\n"
+          + "Content-Type: text/html\r\n"
+          + "Content-Length: 23\r\n" + "\r\n"
+          + "<h1>File Not Found</h1>";
       output.write(errorMessage.getBytes());
     }
     finally {

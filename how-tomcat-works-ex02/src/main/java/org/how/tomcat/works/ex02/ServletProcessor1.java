@@ -52,8 +52,7 @@ public class ServletProcessor1 {
 
 		try {
 			servlet = (Servlet) myClass.newInstance();
-			servlet.service((ServletRequest) request,
-					(ServletResponse) response);
+			servlet.service((ServletRequest) request, (ServletResponse) response);
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		} catch (Throwable e) {
