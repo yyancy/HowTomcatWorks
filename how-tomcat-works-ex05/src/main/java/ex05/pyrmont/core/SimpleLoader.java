@@ -12,8 +12,7 @@ import org.apache.catalina.DefaultContext;
 
 public class SimpleLoader implements Loader {
 
-  public static final String WEB_ROOT =
-    System.getProperty("user.dir") + File.separator  + "webroot";
+  public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator  + "webroot";
 
   ClassLoader classLoader = null;
   Container container = null;
@@ -21,6 +20,7 @@ public class SimpleLoader implements Loader {
   public SimpleLoader() {
     try {
       URL[] urls = new URL[1];
+
       URLStreamHandler streamHandler = null;
       File classPath = new File(WEB_ROOT);
       String repository = (new URL("file", null, classPath.getCanonicalPath() + File.separator)).toString() ;

@@ -23,7 +23,7 @@ public class ServletProcessor1 {
 			URL[] urls = new URL[1];
 			URLStreamHandler streamHandler = null;
 			File classPath = new File(Constants.WEB_ROOT);
-			
+			System.out.println(classPath);
 			// the forming of repository is taken from the createClassLoader
 			// method in
 			// org.apache.catalina.startup.ClassLoaderFactory

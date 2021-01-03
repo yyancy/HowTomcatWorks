@@ -159,22 +159,22 @@ public class HttpResponseBase
             (contentType == null) &&
             (contentCount == 0)) {
             try {
-                setContentType("text/html");
+//                setContentType("text/html");
                 PrintWriter writer = getWriter();
-                writer.println("<html>");
-                writer.println("<head>");
-                writer.println("<title>Tomcat Error Report</title>");
-                writer.println("<br><br>");
-                writer.println("<h1>HTTP Status ");
-                writer.print(status);
-                writer.print(" - ");
-                if (message != null)
-                    writer.print(message);
-                else
-                    writer.print(getStatusMessage(status));
-                writer.println("</h1>");
-                writer.println("</body>");
-                writer.println("</html>");
+//                writer.println("<html>");
+//                writer.println("<head>");
+//                writer.println("<title>Tomcat Error Report</title>");
+//                writer.println("<br><br>");
+//                writer.println("<h1>HTTP Status ");
+//                writer.print(status);
+//                writer.print(" - ");
+//                if (message != null)
+//                    writer.print(message);
+//                else
+//                    writer.print(getStatusMessage(status));
+//                writer.println("</h1>");
+//                writer.println("</body>");
+//                writer.println("</html>");
             } catch (IOException e) {
                 throw e;
             } catch (Throwable e) {
