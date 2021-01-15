@@ -23,6 +23,7 @@ public final class Bootstrap {
 
         System.setProperty("catalina.base", System.getProperty("user.dir") + File.separator + "how-tomcat-works-ex08");
         Connector connector = new HttpConnector();
+        connector.setRedirectPort(12345);
         Wrapper wrapper1 = new SimpleWrapper();
         wrapper1.setName("Primitive");
         wrapper1.setServletClass("PrimitiveServlet");
