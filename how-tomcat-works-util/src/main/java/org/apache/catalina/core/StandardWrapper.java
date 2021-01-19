@@ -883,7 +883,8 @@ public final class StandardWrapper
             // Instantiate and initialize an instance of the servlet class itself
             try {
                 servlet = (Servlet) classClass.newInstance();
-            } catch (ClassCastException e) {
+            }
+            catch (ClassCastException e) {
                 unavailable(null);
                 // Restore the context ClassLoader
                 throw new ServletException
@@ -906,9 +907,9 @@ public final class StandardWrapper
             // Special handling for ContainerServlet instances
             if ((servlet instanceof ContainerServlet) &&
                 isContainerProvidedServlet(actualClass)) {
-System.out.println("calling setWrapper");                  
+                System.out.println("calling setWrapper");
                 ((ContainerServlet) servlet).setWrapper(this);
-System.out.println("after calling setWrapper");                  
+                System.out.println("after calling setWrapper");
             }
 
 

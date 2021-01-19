@@ -189,7 +189,8 @@ final class StandardWrapperValve
                              wrapper.getName()), e);
             throwable = e;
             exception(request, response, e);
-        } catch (UnavailableException e) {
+        }
+        catch (UnavailableException e) {
             sreq.removeAttribute(Globals.JSP_FILE_ATTR);
             log(sm.getString("standardWrapper.serviceException",
                              wrapper.getName()), e);
@@ -514,7 +515,7 @@ final class StandardWrapperValve
                     break;
                 comparePath = comparePath.substring(0, slash);
             }
-            return (false);
+          return (false);
         }
 
         // Case 3 - Extension Match
