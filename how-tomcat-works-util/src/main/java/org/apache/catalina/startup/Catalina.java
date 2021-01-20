@@ -282,6 +282,8 @@ public class Catalina {
                                  "org.apache.catalina.core.StandardServer",
                                  "className");
         digester.addSetProperties("Server");
+
+        // catalina.setServer()
         digester.addSetNext("Server",
                             "setServer",
                             "org.apache.catalina.Server");

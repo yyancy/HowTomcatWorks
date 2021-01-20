@@ -36,6 +36,7 @@ public class MySwingAppWithShutdownHook extends JFrame {
 	private void initialize() {
 		// add shutdown hook
 		MyShutdownHook shutdownHook = new MyShutdownHook();
+
 		Runtime.getRuntime().addShutdownHook(shutdownHook);
 		// create a temp file
 		File file = new File(dir, filename);

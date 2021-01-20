@@ -8,7 +8,7 @@ import org.apache.commons.digester.Digester;
 public class Test02 {
 
   public static void main(String[] args) {
-    String path = System.getProperty("user.dir") + File.separator  + "etc";
+    String path = System.getProperty("user.dir") + File.separator + "how-tomcat-works-ex15" + File.separator + "etc";
     File file = new File(path, "employee2.xml");
     Digester digester = new Digester();
     // add rules

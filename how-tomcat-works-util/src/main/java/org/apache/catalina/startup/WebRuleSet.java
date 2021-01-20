@@ -137,22 +137,30 @@ public class WebRuleSet extends RuleSetBase {
      */
     public void addRuleInstances(Digester digester) {
 
+
+        // context.setPublicId()
         digester.addRule(prefix + "web-app",
                          new SetPublicIdRule(digester, "setPublicId"));
 
+        // 调用context.addParameter()方法.
         digester.addCallMethod(prefix + "web-app/context-param",
                                "addParameter", 2);
         digester.addCallParam(prefix + "web-app/context-param/param-name", 0);
         digester.addCallParam(prefix + "web-app/context-param/param-value", 1);
 
+        // context.setDisplayName()
         digester.addCallMethod(prefix + "web-app/display-name",
                                "setDisplayName", 0);
 
+        // context.setDistributable(true);
         digester.addRule(prefix + "web-app/distributable",
                          new SetDistributableRule(digester));
 
+
         digester.addObjectCreate(prefix + "web-app/ejb-local-ref",
                                  "org.apache.catalina.deploy.ContextLocalEjb");
+
+        // context.addLocalEjb().
         digester.addSetNext(prefix + "web-app/ejb-local-ref",
                             "addLocalEjb",
                             "org.apache.catalina.deploy.ContextLocalEjb");
@@ -189,8 +197,12 @@ public class WebRuleSet extends RuleSetBase {
         digester.addCallMethod(prefix + "web-app/ejb-ref/remote",
                                "setRemote", 0);
 
+
+
         digester.addObjectCreate(prefix + "web-app/env-entry",
                                  "org.apache.catalina.deploy.ContextEnvironment");
+
+        // context.addEnvironment();
         digester.addSetNext(prefix + "web-app/env-entry",
                             "addEnvironment",
                             "org.apache.catalina.deploy.ContextEnvironment");
@@ -206,6 +218,8 @@ public class WebRuleSet extends RuleSetBase {
 
         digester.addObjectCreate(prefix + "web-app/error-page",
                                  "org.apache.catalina.deploy.ErrorPage");
+
+        // context.addErrorPage()
         digester.addSetNext(prefix + "web-app/error-page",
                             "addErrorPage",
                             "org.apache.catalina.deploy.ErrorPage");
@@ -219,6 +233,7 @@ public class WebRuleSet extends RuleSetBase {
 
         digester.addObjectCreate(prefix + "web-app/filter",
                                  "org.apache.catalina.deploy.FilterDef");
+        // context.addFilterDef()
         digester.addSetNext(prefix + "web-app/filter",
                             "addFilterDef",
                             "org.apache.catalina.deploy.FilterDef");
@@ -245,6 +260,9 @@ public class WebRuleSet extends RuleSetBase {
 
         digester.addObjectCreate(prefix + "web-app/filter-mapping",
                                  "org.apache.catalina.deploy.FilterMap");
+
+
+        // context.addFilterMap();
         digester.addSetNext(prefix + "web-app/filter-mapping",
                             "addFilterMap",
                             "org.apache.catalina.deploy.FilterMap");

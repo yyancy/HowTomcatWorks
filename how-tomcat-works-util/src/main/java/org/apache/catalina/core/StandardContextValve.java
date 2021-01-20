@@ -212,8 +212,8 @@ final class StandardContextValve
     }
 
     /**
-     * Report a "not found" error for the specified resource.  FIXME:  We
-     * should really be using the error reporting settings for this web
+     * Report a "not found" error for the specified resource.
+     * FIXME:  We should really be using the error reporting settings for this web
      * application, but currently that code runs at the wrapper level rather
      * than the context level.
      *
