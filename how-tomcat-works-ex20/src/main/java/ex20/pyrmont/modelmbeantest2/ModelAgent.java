@@ -73,7 +73,7 @@ public class ModelAgent {
 		System.out.println("Creating ObjectName");
 		ObjectName objectName = agent.createObjectName();
 		try {
-			ModelMBean modelMBean = agent.createModelMBean("myMBean");
+			ModelMBean modelMBean = agent.createModelMBean("my2MBean");
 			modelMBean.setManagedResource(car, "ObjectReference");
 			mBeanServer.registerMBean(modelMBean, objectName);
 		} catch (Exception e) {

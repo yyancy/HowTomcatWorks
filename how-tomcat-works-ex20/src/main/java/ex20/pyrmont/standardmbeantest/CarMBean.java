@@ -5,4 +5,7 @@ public interface CarMBean {
   public void setColor(String color);
   public void drive();
 
+
+  public void interrupt() throws InterruptedException;
+
 }

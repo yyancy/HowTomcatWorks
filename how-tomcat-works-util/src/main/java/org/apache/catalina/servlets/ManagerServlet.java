@@ -274,7 +274,7 @@ public class ManagerServlet
      * @param wrapper The new wrapper
      */
     public void setWrapper(Wrapper wrapper) {
-System.out.println("setWrapper:" + wrapper.getName()    );
+        System.out.println("setWrapper:" + wrapper.getName()    );
         this.wrapper = wrapper;
         if (wrapper == null) {
             context = null;

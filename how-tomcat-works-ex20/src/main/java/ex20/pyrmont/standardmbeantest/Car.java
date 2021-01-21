@@ -13,4 +13,8 @@ public class Car implements CarMBean {
   public void drive() {
     System.out.println("Baby you can drive my car.");
   }
+
+  public void interrupt() throws InterruptedException {
+    throw new InterruptedException();
+  }
 }

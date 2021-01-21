@@ -5,7 +5,7 @@
 
 <mbeans-descriptors>
 
-  <mbean name="myMBean"
+  <mbean name="my2MBean"
     className="javax.management.modelmbean.RequiredModelMBean"
     description="The ModelMBean that manages our Car object"
     type="ex20.pyrmont.modelmbeantest.Car">

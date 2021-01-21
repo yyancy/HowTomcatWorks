@@ -577,6 +577,10 @@ public class HostConfig
 
     /**
      * Check deployment descriptors last modified date.
+     *
+     * 不能重新部署.包war
+     *
+     *
      */
     protected void checkWebXmlLastModified() {
 
