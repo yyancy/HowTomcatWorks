@@ -229,10 +229,10 @@
             <Host name="localhost" debug="0" appBase="webapps"
                   unpackWARs="true" autoDeploy="true">
 
-                <Context path="/myadmin"
-                         docBase="myadmin"
-                         privileged="true"
-                         reloadable="true"/>
+<!--                <Context path="/myadmin"-->
+<!--                         docBase="myadmin"-->
+<!--                         privileged="true"-->
+<!--                         reloadable="true"/>-->
 
                 <!-- Normally, users must authenticate themselves to each web app
                      individually.  Uncomment the following entry if you would like
