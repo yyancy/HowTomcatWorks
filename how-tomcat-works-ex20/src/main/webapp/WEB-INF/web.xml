@@ -5,9 +5,38 @@ PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
 	<servlet>
 		<servlet-name>myAdmin</servlet-name>
 		<servlet-class>myadmin.MyAdminServlet</servlet-class>
+
+		<security-role-ref>
+			<role-name>whatFuck</role-name>
+			<role-link>yancy</role-link>
+		</security-role-ref>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>myAdmin</servlet-name>
 		<url-pattern>/myAdmin</url-pattern>
 	</servlet-mapping>
+
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>demo</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>manager</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>BASIS AUTHENTICATION</realm-name>
+	</login-config>
+
+<!--	<security-role>-->
+<!--		<role-name>yancy</role-name>-->
+<!--	</security-role>-->
+	<security-role>
+		<role-name>manager</role-name>
+	</security-role>
 </web-app>

@@ -65,6 +65,7 @@ public final class Bootstrap2 {
         constraint.addAuthRole("manager");
         LoginConfig loginConfig = new LoginConfig();
         loginConfig.setRealmName("Simple User Database Realm");
+
         // add realm
         Realm realm = new SimpleUserDatabaseRealm();
         ((SimpleUserDatabaseRealm) realm).createDatabase("conf/tomcat-users.xml");

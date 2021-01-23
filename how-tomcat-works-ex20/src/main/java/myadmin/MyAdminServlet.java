@@ -35,6 +35,11 @@ public class MyAdminServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		boolean whatFuck = request.isUserInRole("whatFuck");
+		System.out.println("has it manag role?:" + whatFuck);
+
+
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		if (registry == null || mBeanServer == null) {
