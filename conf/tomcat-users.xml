@@ -5,5 +5,5 @@
   <role rolename="yancy"/>
   <role rolename="manag"/>
   <role rolename="manage"/>
-  <user username="admin" password="password" roles="manage,yanc"/>
+  <user username="admin" password="password" roles="manager,yanc"/>
 </tomcat-users>
