@@ -37,7 +37,7 @@ public class MyAdminServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		boolean whatFuck = request.isUserInRole("whatFuck");
-		System.out.println("has it manag role?:" + whatFuck);
+		System.out.println("does it have manage role?:" + whatFuck);
 
 
 		response.setContentType("text/html");
